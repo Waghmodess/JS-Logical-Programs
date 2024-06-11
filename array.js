@@ -32,3 +32,18 @@ function removeDuplicates(arr) {
 
 x = removeDuplicates(arr);
 console.log(x);
+
+// 1. Reverse the given array using in-built method.
+x = x.reverse();
+console.log(x);
+
+// 2. Reverse the given array without using in-built method.
+let a = [];
+for (let i = x.length - 1; i >= 0; i--) {
+    a.push(x[i]);
+}
+console.log(a);
+
+// 3. Reverse the given array using Reduce method.
+x = x.reduce((item, currentArr) => [currentArr, ...item], []);
+console.log(x);

@@ -6,3 +6,4 @@ Day 1 :=>
 
 2. Create a array and solve below questions.
    => Remove duplicates from array.
+   => Reverse the given array.
