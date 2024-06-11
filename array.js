@@ -4,11 +4,13 @@ let arr = [1, 2, 1, 3, 2, 4, 3, 5];
 let x = Array.from(new Set(arr));
 console.log(x);
 
-// 2. Remove duplicates from the array using spread operator.
+// OR
+
+// Remove duplicates from the array using spread operator.
 x = [...new Set(arr)];
 console.log(x);
 
-// 3. Remove duplicates from the array without using in-built method.
+// 2 Remove duplicates from the array without using in-built method.
 function removeDup(arr) {
     return arr.filter((item, index) => arr.indexOf(item) === index);
 }
@@ -33,17 +35,36 @@ function removeDuplicates(arr) {
 x = removeDuplicates(arr);
 console.log(x);
 
-// 1. Reverse the given array using in-built method.
+// 3. Reverse the given array using in-built method.
 x = x.reverse();
 console.log(x);
 
-// 2. Reverse the given array without using in-built method.
+// OR
+
+// Reverse the given array without using in-built method.
 let a = [];
 for (let i = x.length - 1; i >= 0; i--) {
     a.push(x[i]);
 }
 console.log(a);
 
-// 3. Reverse the given array using Reduce method.
+// OR
+
+// Reverse the given array using Reduce method.
 x = x.reduce((item, currentArr) => [currentArr, ...item], []);
 console.log(x);
+
+// 3. Find the Maximum and Minimum number from given Array.
+let max = x[0];
+let min = x[0];
+for (let i = 0; i <= x.length; i++) {
+    if (x[i] > max) { max = x[i] }
+    if (x[i] < min) { min = x[i] }
+}
+console.log(max, min);
+
+// OR
+
+let max1 = Math.max(...x);
+let min1 = Math.min(...x);
+console.log(max1, min1);
