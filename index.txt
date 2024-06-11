@@ -1,5 +1,8 @@
 Day 1 :=>
-1. create a object and extract the follow.
+1. Create a object and extract the follow.
    => Entries
    => Keys
    => Values
+
+2. Create a array and solve below questions.
+   => Remove duplicates from array.
