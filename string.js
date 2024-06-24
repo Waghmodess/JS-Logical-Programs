@@ -19,3 +19,14 @@ function checkPalindrome(name$) {
     }
 }
 checkPalindrome(name$);
+
+let input = name$.toLowerCase();
+let revInput = '';
+for (let i = input.length - 1; i >= 0; i--) {
+    revInput += input[i];
+}
+if (input === revInput) {
+    console.log('It is a palindrome');
+} else {
+    console.log('It is not a palindrome');
+}
