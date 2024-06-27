@@ -30,3 +30,29 @@ if (input === revInput) {
 } else {
     console.log('It is not a palindrome');
 }
+
+// Reverses each word in a sentence without using any inbuilt method
+let sentence = "Hello world from ChatGPT";
+function reverseWords(sentence) {
+    let reversedSentence = '';
+    let wordStart = 0;
+    for (let i = 0; i <= sentence.length; i++) {
+        // Check if we have reached the end of a word or the sentence
+        if (i === sentence.length || sentence[i] === ' ') {
+            // Reverse the current word
+            for (let j = i - 1; j >= wordStart; j--) {
+                reversedSentence += sentence[j];
+            }
+            // Add a space if it's not the end of the sentence
+            if (i !== sentence.length) {
+                reversedSentence += ' ';
+            }
+            // Update the start position for the next word
+            wordStart = i + 1;
+        }
+    }
+    return reversedSentence;
+}
+
+let result = reverseWords(sentence);
+console.log(result); // "olleH dlrow morf TPGtahC"
