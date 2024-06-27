@@ -56,3 +56,17 @@ function reverseWords(sentence) {
 
 let result = reverseWords(sentence);
 console.log(result); // "olleH dlrow morf TPGtahC"
+
+// Find how many Vowels are there in string;
+let str1 = 'Hello World';
+function findVowels(str1) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let count = 0;
+    let ipStr = str1.toLowerCase();
+    for (let str of ipStr) {
+        if (vowels.includes(str)) {
+            count++
+        }
+    } return count;
+}
+console.log(findVowels(str1));
